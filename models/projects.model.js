@@ -17,6 +17,10 @@ Project.init({
   project_description: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  project_information: {
+    type: DataTypes.TEXT,
+    allowNull: true,    
   }
 }, {
     sequelize,
