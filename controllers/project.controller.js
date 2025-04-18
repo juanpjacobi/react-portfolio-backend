@@ -42,6 +42,7 @@ export const createProject = async (req, res) => {
   const project = {
     project_name: req.body.project_name,
     project_description: req.body.project_description,
+    project_information: req.body.project_information,
   }
 
   const createdProject = await Project.create(project);
@@ -63,6 +64,7 @@ export const updateProject = async (req, res) => {
   const project = {
     project_name: req.body.project_name,
     project_description: req.body.project_description,
+    project_information: req.body.project_information,
   }
 
   const updatedProject = await Project.update(project, {
