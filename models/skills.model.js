@@ -16,10 +16,34 @@ Skill.init({
   skill_level: {
     type: DataTypes.INTEGER,
     allowNull: false
+  },
+  category: {
+    type: DataTypes.STRING,  
+    allowNull: true,          
+    validate: {
+      isInCategory(value) {
+        if (value == null) return; 
+        const allowed = [
+          "Core Technologies",
+          "Frontend & UI",
+          "Tools & Practices",
+          "Additional Knowledge"
+        ];
+        if (!allowed.includes(value)) {
+          throw new Error(`Invalid category: ${value}`);
+        }
+      }
+    }
+  },
+  is_core: {
+    type: DataTypes.BOOLEAN,
+    allowNull: true,   
+    defaultValue: false
   }
 }, {
-    sequelize,
-    modelName: 'Skill'
+  sequelize,
+  modelName: "Skill",
+  tableName: "Skills" 
 });
 
 export default Skill;
