@@ -18,28 +18,28 @@ Skill.init({
     allowNull: false
   },
   category: {
-    type: DataTypes.STRING,  
-    allowNull: true,          
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: "Additional Knowledge",
     validate: {
       isInCategory(value) {
-        if (value == null) return; 
         const allowed = [
           "Core Technologies",
           "Frontend & UI",
           "Tools & Practices",
-          "Additional Knowledge"
+          "Additional Knowledge",
         ];
         if (!allowed.includes(value)) {
           throw new Error(`Invalid category: ${value}`);
         }
-      }
-    }
+      },
+    },
   },
   is_core: {
     type: DataTypes.BOOLEAN,
-    allowNull: true,   
-    defaultValue: false
-  }
+    allowNull: false,
+    defaultValue: false,
+  },
 }, {
   sequelize,
   modelName: "Skill",
