@@ -112,7 +112,6 @@ export const updateSkill = async (req, res) => {
       payload.skill_level = skill_level;
     }
 
-    // Si no mandan category/is_core, los inferimos (según el nombre final)
     const nameForInference = payload.skill_name ?? skill.skill_name;
     payload.category = (typeof category !== "undefined")
       ? category
