@@ -12,6 +12,8 @@ const categoryMap = {
   "MongoDB": "Core Technologies",
   "SQL Stored Procedures": "Core Technologies",
   "React": "Core Technologies",
+  "Nextjs": "Core Technologies",
+
 
   "Angular": "Frontend & UI",
   "TailwindCSS": "Frontend & UI",
@@ -27,7 +29,6 @@ const categoryMap = {
   "Jira": "Tools & Practices",
   "SourceTree": "Tools & Practices",
 
-
   "Flutter": "Additional Knowledge",
   "Java": "Additional Knowledge",
   "Livewire": "Additional Knowledge",
@@ -36,7 +37,7 @@ const categoryMap = {
 
 const coreSet = new Set([
   "JavaScript", "TypeScript", "Node.js", "NestJS",
-  "PHP", "Laravel", "MySQL", "MongoDB", "SQL Stored Procedures", "React"
+  "PHP", "Laravel", "MySQL", "MongoDB", "SQL Stored Procedures", "React", "Nextjs",
 ]);
 
 // Ajustá niveles 1..5 a tu gusto
@@ -51,6 +52,7 @@ const defaultLevels = {
   "MongoDB": 5,
   "SQL Stored Procedures": 5,
   "React": 5,
+  "Nextjs": 5,
 
   "Angular": 5,
   "TailwindCSS": 5,
