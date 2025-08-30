@@ -11,8 +11,8 @@ const categoryMap = {
   "MySQL": "Core Technologies",
   "MongoDB": "Core Technologies",
   "SQL Stored Procedures": "Core Technologies",
+  "React": "Core Technologies",
 
-  "React": "Frontend & UI",
   "Angular": "Frontend & UI",
   "TailwindCSS": "Frontend & UI",
   "Bootstrap": "Frontend & UI",
@@ -25,15 +25,18 @@ const categoryMap = {
   "Docker": "Tools & Practices",
   "Postman": "Tools & Practices",
   "Jira": "Tools & Practices",
+  "SourceTree": "Tools & Practices",
+
 
   "Flutter": "Additional Knowledge",
   "Java": "Additional Knowledge",
   "Livewire": "Additional Knowledge",
+  "Python": "Additional Knowledge",
 };
 
 const coreSet = new Set([
   "JavaScript", "TypeScript", "Node.js", "NestJS",
-  "PHP", "Laravel", "MySQL", "MongoDB", "SQL Stored Procedures"
+  "PHP", "Laravel", "MySQL", "MongoDB", "SQL Stored Procedures", "React"
 ]);
 
 // Ajustá niveles 1..5 a tu gusto
@@ -45,10 +48,10 @@ const defaultLevels = {
   "PHP": 5,
   "Laravel": 5,
   "MySQL": 5,
-  "MongoDB": 4,
+  "MongoDB": 5,
   "SQL Stored Procedures": 5,
-
   "React": 5,
+
   "Angular": 5,
   "TailwindCSS": 5,
   "Bootstrap": 5,
@@ -64,7 +67,8 @@ const defaultLevels = {
 
   "Flutter": 3,
   "Java": 3,
-  "Livewire": 3
+  "Livewire": 3,
+  "Python": 3
 };
 
 // Lista final a poblar (podés agregar/quitar aquí)

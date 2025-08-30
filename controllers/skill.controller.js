@@ -1,40 +1,5 @@
 import Skill from "../models/skills.model.js";
 
-const categoryMap = {
-  "JavaScript": "Core Technologies",
-  "TypeScript": "Core Technologies",
-  "Node.js": "Core Technologies",
-  "NestJS": "Core Technologies",
-  "PHP": "Core Technologies",
-  "Laravel": "Core Technologies",
-  "MySQL": "Core Technologies",
-  "MongoDB": "Core Technologies",
-  "SQL Stored Procedures": "Core Technologies",
-
-  "React": "Frontend & UI",
-  "Angular": "Frontend & UI",
-  "TailwindCSS": "Frontend & UI",
-  "Bootstrap": "Frontend & UI",
-  "HTML5": "Frontend & UI",
-  "CSS3": "Frontend & UI",
-
-  "Git": "Tools & Practices",
-  "GitHub": "Tools & Practices",
-  "Bitbucket": "Tools & Practices",
-  "Docker": "Tools & Practices",
-  "Postman": "Tools & Practices",
-  "Jira": "Tools & Practices",
-
-  "Flutter": "Additional Knowledge",
-  "Java": "Additional Knowledge",
-  "Livewire": "Additional Knowledge"
-};
-
-const coreSet = new Set([
-  "JavaScript", "TypeScript", "Node.js", "NestJS",
-  "PHP", "Laravel", "MySQL", "MongoDB", "SQL Stored Procedures"
-]);
-
 export const getSkills = async (req, res) => {
   try {
     const skills = await Skill.findAll({
